@@ -1,0 +1,88 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app .app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.app .app-header .search {
+  box-sizing: border-box;
+  width: 500px;
+  max-width: 90vw;
+  padding: 0 20px;
+  line-height: 2;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--shadow-color);
+  color: var(--primary-color);
+}
+
+.app .app-header .search:focus {
+  box-shadow: 0 0 5px var(--shadow-active-color);
+  color: var(--primary-color);
+}
+
+.app .app-header .search::placeholder {
+  color: var(--text-thin-color);
+}
+
+.app .app-header .search:focus::placeholder {
+  color: var(--primary-color);
+}
+
+.app .app-main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app .app-main .list {
+  margin: 0 auto;
+  padding: 10px;
+  width: 1200px;
+  max-width: 90vw;
+}
+
+.app .app-main .list .item {
+  margin-bottom: 10px;
+  padding: 10px;
+  line-height: 1.6;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--shadow-color);
+  transition: var(--common-transition);
+}
+
+.app .app-main .list .item:hover {
+  box-shadow: 0 0 5px var(--shadow-active-color);
+  background: var(--bg-active-color);
+}
+
+.app .app-main .list .item .title {
+  font-size: 20px;
+  color: var(--text-color);
+  transition: var(--common-transition);
+}
+
+.app .app-main .list .item:hover .title {
+  color: var(--primary-color);
+}
+
+.app .app-main .list .item .address {
+  font-size: 14px;
+  color: var(--text-thin-color);
+  transition: var(--common-transition);
+}
+
+.app .app-main .list .item:hover .address {
+  color: var(--text-color);
+}
